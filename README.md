@@ -60,3 +60,9 @@ git rm -r --cached .
  - And finally commit and push the changes.
 
 </br>
+
+### 7. To cherry pick multiple commits:
+
+```
+git cherry-pick 959f6bf4097bb565c2bef105964d5fb2437bd644^..d89446838c73a66585d12a04a16dc6c16b728f3a
+```
