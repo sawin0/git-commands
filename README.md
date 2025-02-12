@@ -66,3 +66,13 @@ git rm -r --cached .
 ```
 git cherry-pick 959f6bf4097bb565c2bef105964d5fb2437bd644^..d89446838c73a66585d12a04a16dc6c16b728f3a
 ```
+
+</br>
+
+### 8. To amend the most recent commit by setting both the commit author and committer date to yesterday's date without changing the commit message.
+
+```
+GIT_COMMITTER_DATE="$(date -v -1d "+%Y-%m-%dT%H:%M:%S")" git commit --amend --no-edit --date "$(date -v -1d "+%Y-%m-%dT%H:%M:%S")"
+```
+
+ - Note: You can replace -1d with any other number of days to adjust the date accordingly (e.g., -5d for 5 days ago, -10d for 10 days ago, etc.).
