@@ -17,7 +17,16 @@ git log --author="$(git config sawin0)" --since=midnight --oneline
 
 </br>
 
-### 3. To stages all tracked (but not new) changes and commits them with the provided message in one step.
+### 3. To list all your commit message of certain date range.
+
+```
+git log --author="$(git config sawin0)" --since="2025-04-01" --until="2025-04-01 23:59:59" --oneline
+```
+ - Note: You can adjust the --since and --until dates to any range you prefer.
+
+</br>
+
+### 4. To stages all tracked (but not new) changes and commits them with the provided message in one step.
 
 ```
 git commit -am "Commit Message"
@@ -25,7 +34,7 @@ git commit -am "Commit Message"
 
 </br>
 
-### 4. To rebase the entire commit history, starting from the root commit, and amends each commit to reset the author to the current user without changing the commit message. Note: This command will edit the commit date too.
+### 5. To rebase the entire commit history, starting from the root commit, and amends each commit to reset the author to the current user without changing the commit message. Note: This command will edit the commit date too.
 
 ```
 git rebase -r --root --exec "git commit --amend --no-edit --reset-author"
@@ -33,7 +42,7 @@ git rebase -r --root --exec "git commit --amend --no-edit --reset-author"
 
 </br>
 
-### 5. To rebase the entire commit history while preserving the date.
+### 6. To rebase the entire commit history while preserving the date.
   - Create a new shell file called 'reset-author-preserve-date.sh' and paste the following code into it.
 
 ```
@@ -50,7 +59,7 @@ git rebase -r --root --exec "./reset-author-preserve-date.sh"
 
 </br>
 
-### 6. To remove all the files that must be git ignored:
+### 7. To remove all the files that must be git ignored:
   - Update your .gitignore file and run the following command
 
 ```
@@ -61,7 +70,7 @@ git rm -r --cached .
 
 </br>
 
-### 7. To cherry pick multiple commits:
+### 8. To cherry pick multiple commits:
 
 ```
 git cherry-pick 959f6bf4097bb565c2bef105964d5fb2437bd644^..d89446838c73a66585d12a04a16dc6c16b728f3a
@@ -69,7 +78,7 @@ git cherry-pick 959f6bf4097bb565c2bef105964d5fb2437bd644^..d89446838c73a66585d12
 
 </br>
 
-### 8. To amend the most recent commit by setting both the commit author and committer date to yesterday's date without changing the commit message.
+### 9. To amend the most recent commit by setting both the commit author and committer date to yesterday's date without changing the commit message.
 
 ```
 GIT_COMMITTER_DATE="$(date -v -1d "+%Y-%m-%dT%H:%M:%S")" git commit --amend --no-edit --date "$(date -v -1d "+%Y-%m-%dT%H:%M:%S")"
