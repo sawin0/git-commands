@@ -85,3 +85,14 @@ GIT_COMMITTER_DATE="$(date -v -1d "+%Y-%m-%dT%H:%M:%S")" git commit --amend --no
 ```
 
  - Note: You can replace -1d with any other number of days to adjust the date accordingly (e.g., -5d for 5 days ago, -10d for 10 days ago, etc.).
+
+ </br>
+
+ ### 10. To automatically pull the latest changes from the current branch of all Git repositories in a specified directory.
+
+ ```
+ https://github.com/sawin0/git-sync-all
+ ```
+  - Clone this repo and follow the instruction
+
+  </br>
