@@ -93,6 +93,6 @@ GIT_COMMITTER_DATE="$(date -v -1d "+%Y-%m-%dT%H:%M:%S")" git commit --amend --no
  ```
  https://github.com/sawin0/git-sync-all
  ```
-  - Clone this repo and follow the instruction
+  - Visit and follow the instructions
 
   </br>
