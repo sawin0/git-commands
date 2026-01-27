@@ -106,3 +106,13 @@ GIT_COMMITTER_DATE="$(date -v -1d "+%Y-%m-%dT%H:%M:%S")" git commit --amend --no
 ```
 
   - Here, we are keeping main, and dev branches only. Other branches will be deleted.
+
+  </br>
+
+### 12. To fetch updates from the remote and remove local branches that no longer exist on the remote.
+
+```
+git fetch --prune
+```
+
+</br>
