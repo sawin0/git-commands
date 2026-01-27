@@ -96,3 +96,13 @@ GIT_COMMITTER_DATE="$(date -v -1d "+%Y-%m-%dT%H:%M:%S")" git commit --amend --no
   - Visit and follow the instructions
 
   </br>
+
+  ### 11. To delete all the branches except some branches.
+
+  ```
+  git branch \
+  | grep -vE "^\*|main|dev" \
+  | xargs git branch -d
+```
+
+  - Here, we are keeping main, and dev branches only. Other branches will be deleted.
