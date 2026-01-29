@@ -91,7 +91,7 @@ GIT_COMMITTER_DATE="$(date -v -1d "+%Y-%m-%dT%H:%M:%S")" git commit --amend --no
 
 - Note: You can replace -1d with any other number of days to adjust the date accordingly (e.g., -5d for 5 days ago, -10d for 10 days ago, etc.).
 
- </br>
+</br>
 
 ### 10. To automatically pull the latest changes from the current branch of all Git repositories in a specified directory.
 
@@ -101,7 +101,7 @@ https://github.com/sawin0/git-sync-all
 
 - Visit and follow the instructions
 
-  </br>
+</br>
 
 ### 11. To delete all the branches except some branches.
 
@@ -113,7 +113,7 @@ git branch \
 
 - Here, we are keeping main, and dev branches only. Other branches will be deleted.
 
-  </br>
+</br>
 
 ### 12. To fetch updates from the remote and remove local branches that no longer exist on the remote.
 
@@ -121,7 +121,7 @@ git branch \
 git fetch --prune
 ```
 
-  </br>
+</br>
 
 ### 13. To remove files and folders from past repository history. This command will rewrite repo history.
 
@@ -133,4 +133,12 @@ git filter-branch --force --index-filter \
 
 - Let's say, build, and .dart_tool folder is commited in past commits, then this command helps to remove them from all the commits in current branch.
 
-  </br>
+</br>
+
+### 14. To force Git to ignore case changes.
+
+```
+git config core.ignorecase false
+```
+
+</br>
